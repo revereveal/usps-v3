@@ -2,7 +2,6 @@
 
 import httpx
 import pytest
-import respx
 
 from usps_v3.exceptions import APIError, ValidationError
 

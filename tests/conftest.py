@@ -1,9 +1,6 @@
 """Shared test fixtures for USPS v3 SDK tests."""
 
-import json
 import time
-from pathlib import Path
-from unittest.mock import patch
 
 import httpx
 import pytest
