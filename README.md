@@ -4,9 +4,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![RevAddress](https://img.shields.io/badge/Managed%20API-RevAddress-6366f1)](https://revaddress.com)
 
-Python SDK for the **USPS Web Tools v3 REST API** — the replacement for the retired XML-based Web Tools.
+USPS v3 REST API client — OAuth 2.0, address validation, tracking, labels, rates. Drop-in replacement for the `usps-api` PyPI package (retired January 2026).
 
 Direct USPS integration. OAuth 2.0. No middleman. No per-label fees.
+
+> **Migrating from `usps-api`?** That package (13,700+ downloads/month) uses the retired USPS Web Tools XML API (shut down January 25, 2026). This SDK uses the new v3 REST API with OAuth 2.0. See [Migration from usps-api](#migration-from-usps-api) below.
 
 > **Don't want to manage USPS credentials?** [RevAddress](https://revaddress.com) provides a managed USPS v3 API with flat monthly pricing, rate limit handling, and BYOK support. [Get a free sandbox key](https://revaddress.com/signup/) — no credit card required.
 
@@ -145,9 +147,9 @@ The v3 API defaults to **60 requests/hour** (down from unlimited in Web Tools). 
 
 To request a higher limit, contact USPS at [emailus.usps.com](https://emailus.usps.com). See our [USPS rate limits guide](https://revaddress.com/blog/usps-rate-limits/) for details.
 
-## Migration from Web Tools
+## Migration from usps-api
 
-If you're migrating from the retired USPS Web Tools XML API:
+The `usps-api` PyPI package (13,700+ downloads/month) uses the retired USPS Web Tools XML API (shut down January 25, 2026). If you're migrating from `usps-api` or any Web Tools XML integration:
 
 | Web Tools (XML) | v3 SDK (Python) |
 |-----------------|-----------------|
