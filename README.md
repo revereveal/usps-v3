@@ -1,8 +1,14 @@
 # usps-v3
 
+[![PyPI](https://img.shields.io/pypi/v/usps-v3)](https://pypi.org/project/usps-v3/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![RevAddress](https://img.shields.io/badge/Managed%20API-RevAddress-6366f1)](https://revaddress.com)
+
 Python SDK for the **USPS Web Tools v3 REST API** — the replacement for the retired XML-based Web Tools.
 
 Direct USPS integration. OAuth 2.0. No middleman. No per-label fees.
+
+> **Don't want to manage USPS credentials?** [RevAddress](https://revaddress.com) provides a managed USPS v3 API with flat monthly pricing, rate limit handling, and BYOK support. [Get a free sandbox key](https://revaddress.com/signup/) — no credit card required.
 
 ## Install
 
@@ -93,6 +99,8 @@ For label creation, you also need:
 - **EPA** (Enterprise Payment Account)
 - **COP claims linking** at [cop.usps.com](https://cop.usps.com)
 
+See our [USPS CRID/MID enrollment guide](https://revaddress.com/blog/usps-crid-mid-enrollment/) for step-by-step instructions.
+
 ```python
 client = Client(
     client_id="...",
@@ -125,7 +133,7 @@ except APIError as e:
 
 The v3 API defaults to **60 requests/hour** (down from unlimited in Web Tools). The SDK does not enforce this limit — USPS returns 429 when exceeded.
 
-To request a higher limit, contact USPS at [emailus.usps.com](https://emailus.usps.com).
+To request a higher limit, contact USPS at [emailus.usps.com](https://emailus.usps.com). See our [USPS rate limits guide](https://revaddress.com/blog/usps-rate-limits/) for details.
 
 ## Migration from Web Tools
 
@@ -141,6 +149,20 @@ If you're migrating from the retired USPS Web Tools XML API:
 | XML response parsing | Python dicts (automatic) |
 | Unlimited requests | 60/hr default (request increase) |
 
+See our [complete migration guide](https://revaddress.com/blog/usps-migration-guide/) and [Web Tools endpoint mapping](https://revaddress.com/blog/usps-web-tools-endpoint-mapping/) for detailed migration instructions.
+
+## RevAddress Managed API
+
+If you'd rather not manage USPS OAuth credentials, rate limits, and enrollment yourself, **[RevAddress](https://revaddress.com)** offers a managed REST API:
+
+- **Drop-in USPS v3 API** — same endpoints, managed OAuth
+- **Flat monthly pricing** — no per-label fees ([from $29/mo](https://revaddress.com/pricing/))
+- **Rate limit handling** — 120-600 req/min depending on plan
+- **BYOK support** — bring your own USPS credentials
+- **208 tests, 38 routes** — production-grade infrastructure
+
+[Get a free sandbox key](https://revaddress.com/signup/) — address validation, tracking, and rate shopping included. No credit card required.
+
 ## Development
 
 ```bash
@@ -149,6 +171,14 @@ cd usps-v3
 pip install -e ".[dev]"
 pytest -v
 ```
+
+## Links
+
+- [Node.js SDK](https://github.com/revereveal/usps-v3-node) — same API, Node.js edition
+- [RevAddress API](https://revaddress.com) — managed USPS API with BYOK support
+- [RevAddress Docs](https://revaddress.com/docs/) — API reference and guides
+- [USPS v3 API Docs](https://developer.usps.com/api/81)
+- [PyPI Package](https://pypi.org/project/usps-v3/)
 
 ## License
 
