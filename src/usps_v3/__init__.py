@@ -13,9 +13,13 @@ Or with environment variables (USPS_CLIENT_ID, USPS_CLIENT_SECRET):
 from .client import Client
 from .exceptions import APIError, AuthError, NetworkError, RateLimitError, USPSError, ValidationError
 
-__version__ = "1.0.0"
+# Alias for consistency with Node SDK (exports USPSClient)
+USPSClient = Client
+
+__version__ = "1.0.1"
 __all__ = [
     "Client",
+    "USPSClient",
     "USPSError",
     "AuthError",
     "ValidationError",
