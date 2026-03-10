@@ -171,7 +171,7 @@ If you'd rather not manage USPS OAuth credentials, rate limits, and enrollment y
 - **Flat monthly pricing** — no per-label fees ([from $29/mo](https://revaddress.com/pricing/))
 - **Rate limit handling** — 120-600 req/min depending on plan
 - **BYOK support** — bring your own USPS credentials
-- **208 tests, 38 routes** — production-grade infrastructure
+- **286 tests, 41 routes** — production-grade infrastructure
 
 [Get a free sandbox key](https://revaddress.com/signup/) — address validation, tracking, and rate shopping included. No credit card required.
 
@@ -187,6 +187,7 @@ pytest -v
 ## Links
 
 - [Node.js SDK](https://github.com/revereveal/usps-v3-node) — same API, Node.js edition
+- [PHP SDK](https://github.com/revereveal/usps-v3-php) — same API, PHP edition
 - [RevAddress API](https://revaddress.com) — managed USPS API with BYOK support
 - [RevAddress Docs](https://revaddress.com/docs/) — API reference and guides
 - [USPS v3 API Docs](https://developer.usps.com/api/81)
