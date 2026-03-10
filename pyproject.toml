@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "usps-v3"
-version = "1.0.2"
+version = "1.0.3"
 description = "USPS v3 REST API client — OAuth 2.0, address validation, tracking, labels, rates. Drop-in replacement for usps-api (retired Jan 2026)."
 readme = "README.md"
 license = "MIT"
